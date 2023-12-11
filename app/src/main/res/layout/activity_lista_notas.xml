@@ -4,18 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.alura.ceep.ui.activity.ListaNotasActivity">
+    tools:context="br.com.alura.ceep.ui.activity.ListaNotasActivity">
 
-    <ListView
-        android:id="@+id/listView"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lista_notas_recyclerview"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        app:layoutManager="LinearLayoutManager"
         app:layout_constraintBottom_toTopOf="@id/lista_notas_insere_nota"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.114"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.033"
         tools:listitem="@layout/item_nota" />
 
     <View android:id="@+id/lista_notas_fundo_gradiente_inferior"
